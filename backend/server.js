@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const atlasUri = "mongodb+srv://CRUD:2712@cluster0.vvnbe3e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const atlasUri = "mongodb+srv://CRUD:123@cluster0.vvnbe3e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(atlasUri)
   .then(() => console.log('✅ Connected Successfully to MongoDB Atlas!'))
