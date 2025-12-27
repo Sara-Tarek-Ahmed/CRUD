@@ -1,8 +1,9 @@
-backend/node_modules/
-backend/.env
+node_modules/
+dist/
+.angular/
 
-frontend/node_modules/
-frontend/.angular/
-frontend/dist/
-
+.env
 .DS_Store
+
+npm-debug.log*
+yarn-error.log*
