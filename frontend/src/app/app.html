@@ -1,0 +1,37 @@
+<div style="padding: 20px;">
+  <h2>MEAN Stack Task Manager</h2>
+
+  <section>
+    <input [(ngModel)]="newTaskTitle" placeholder="Task Title">
+    <button (click)="addTask()">Create Task</button>
+  </section>
+
+  <hr>
+
+  <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Task Title</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>
+          <input type="checkbox" [checked]="task.completed" (change)="toggleTask(task)">
+        </td>
+        <td>
+          <span [style.text-decoration]="task.completed ? 'line-through' : 'none'">
+            {{ task.title }}
+          </span>
+        </td>
+        <td>
+          <button (click)="deleteTask(task._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="tasks.length === 0">No tasks available.</p>
+</div>
