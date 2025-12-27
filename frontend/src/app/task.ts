@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/api/tasks';
-
+  private apiUrl = 'https://crud-production-2db7.up.railway.app/api/tasks';
   constructor(private http: HttpClient) {}
 
   getTasks(): Observable<any> {
